@@ -1,0 +1,26 @@
+{
+  "name": "holamundo",
+  "version": "1.0.0",
+  "description": "este es el primer proyecto de javascript con node",
+  "main": "index.js",
+  "scripts": {
+    "mensaje": "node mensaje.js",
+    "start": "node index.js",
+    "saludar": "node holamundo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chapa0723/javascript.git"
+  },
+  "keywords": [
+    "holamundo",
+    "firstproyect"
+  ],
+  "author": "Chapa0723",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chapa0723/javascript/issues"
+  },
+  "homepage": "https://github.com/chapa0723/javascript#readme"
+}
