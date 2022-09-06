@@ -9,8 +9,16 @@ Crea un archivo JS que contenga las siguientes líneas
 - Una variable que contenga la primera letra del Nombre
 - Otra variable que contenga la última letra del Apellido
 - Una cadena de texto que elimine los espacios de la variable "estudiante"
-- Una variable booleana que diga si el Nombre está contenido en la variable "estudia
+- Una variable booleana que diga si el Nombre está contenido en la variable "estudiante"
 */
 
-
-
+let nombre = "David";
+let apellido= "Chaparro";
+let estudiante = nombre.concat(" ", apellido)
+let estudianteMayus = estudiante.toUpperCase()
+let estudianteMinus = estudiante.toLowerCase()
+let letras = estudiante.length
+let primera = nombre.charAt(0) //asignamos el primer caracter del string 
+let ultima = apellido.charAt(apellido.length - 1) // asignamos la ultima cadena del string
+let noEspacio = estudiante.replace(/ /g,'')  // el caracter "g" hace mencion al "global" del string, lo cual va a repetir el proceso en todo el string
+let contiene = estudiante.includes("David")
