@@ -102,12 +102,12 @@ console.log(val)
 const newArray = array.map((valor, indice) =>`${indice + 1}- ${valor}`)
 console.log(newArray)
 
-const listaObjetos = [
-    {nombre: "Leire", edad: 43},
-    {nombre: "David", edad: 23},
-    {nombre: "Michael", edad: 19},
-    {nombre: "Dario", edad: 21}
-]
+// const listaObjetos = [
+//     {nombre: "Leire", edad: 43},
+//     {nombre: "David", edad: 23},
+//     {nombre: "Michael", edad: 19},
+//     {nombre: "Dario", edad: 21}
+// ]
 
 // const mayores = listaObjetos.filter(obj=> {
 //     if (obj.edad > 30 ){
@@ -116,11 +116,11 @@ const listaObjetos = [
 //         return false
 //     }
 // })
-const mayores = listaObjetos.filter(obj => obj.edad >30)
-console.log(mayores)
+//const mayores = listaObjetos.filter(obj => obj.edad >30)
+//console.log(mayores)
 
-const noDario = listaObjetos.filter(obj=> obj.nombre !== "Dario")
-console.log(noDario)
+// const noDario = listaObjetos.filter(obj=> obj.nombre !== "Dario")
+// console.log(noDario)
 
 //utilizando reduce.() - se utiliza para casos muy concretos
 const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -132,3 +132,75 @@ const suma = num.reduce((acumulado, cur, i, arrayOriginal )=>{
     return acumulado + cur
 })  
 console.log(suma)
+
+// .sort() Se usa para ordenar las listas -> modifica la lista original
+const numeros = [1,3 ,2 , 4, 5, 6, 7, 8, 10, 9]
+// a) representa el elemento anterio - b) representa el siguiente elemento
+// Es obligatorio que retorne un numero
+numeros.sort((a, b)=>{
+    if (a<b){
+        return +1
+    } else if (a>b){
+        return -1
+    } else { 
+        return 0
+    }})
+console.log(numeros)
+
+// Ordenar unicamente arrays numericos
+const arrayNumerico = [2, 4, 5, 6, 1, 12, 23, 45, 1, 34]
+arrayNumerico.sort((a, b)=> b - a)
+console.log(arrayNumerico)
+
+const listaObjetos = [
+    {nombre: "Leire", edad: 43},
+    {nombre: "David", edad: 23},
+    {nombre: "Michael", edad: 19},
+    {nombre: "Dario", edad: 21}
+]
+
+// listaObjetos.sort((a, b)=>{
+//     if (a.edad < b.edad){
+//         return -1
+//     } else if (a.edad > b.edad){
+//         return +1
+//     } else {
+//         return 0
+//     }
+// })
+listaObjetos.sort((a, b)=> b.edad < a.edad)
+console.log(listaObjetos) 
+
+// Comparar listas
+// .every()
+const vector = [4, 6, 6, 7, 3, 6, 2, 1, -1, -6, 12, 4, -40]
+const resultado = vector.every(valor =>{
+    if (valor > 0){
+        return true
+    } else {
+        return false
+    }
+})
+console.log(resultado)
+
+const resul = vector.every(varl => val > 0)
+console.log(resul) 
+
+const numeritos1 = [1,2,3,4]
+const numeritos2 = [1,2, 3, 4]
+console.log (numeritos1 === numeritos2)
+
+const comparar = (array1, array2) => {
+    if (array1.length !== array2.length) return false
+    const res = array1.every((valor, i) => valor === array2[i])
+    return res
+}
+numeritos3 = [1,2, 3, 5]
+console.log(comparar(numeritos1, numeritos2))
+console.log(comparar(numeritos1, numeritos3))
+
+
+
+
+
+
