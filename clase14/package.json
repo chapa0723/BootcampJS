@@ -1,0 +1,12 @@
+{
+  "name": "clase14",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server . -p 6969"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
